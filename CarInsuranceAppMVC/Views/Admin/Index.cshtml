@@ -1,0 +1,31 @@
+﻿@using CarInsuranceAppMVC.Models
+@model List<SignUp>
+
+<div class="row no-gutters m-3">
+    <div class="card col-sm-12 col-md-10 col-lg-6 mx-auto shadow">
+        <div class="card-header text-center">
+            <h5 class="m-0">Quotes</h5>
+        </div>
+        <div class="card-body">
+            @foreach (var signup in Model)
+            {
+                <div class="row mb-2">
+                    <div class="col">
+                        First Name: @signup.FirstName
+                    </div>
+                    <div class="col">
+                        Last Name: @signup.LastName
+                    </div>
+                    <div class="col">
+                        Email Address: @signup.EmailAddress
+                    </div>
+                    <div class="col">
+                        Quote: @signup.Quote
+                    </div>
+                    <br />
+                </div>
+            }       
+        </div>
+    </div>    
+</div>
+
